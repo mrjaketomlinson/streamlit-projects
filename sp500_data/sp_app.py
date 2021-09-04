@@ -4,6 +4,7 @@ import pandas as pd
 import base64
 import matplotlib.pyplot as plt
 import yfinance as yf
+from datetime import datetime, timedelta
 
 # Title and Description
 st.title('S&P 500 App')
@@ -54,9 +55,11 @@ st.markdown(file_download(df_selected_sector), unsafe_allow_html=True)
 def get_ticker_data(*args):
     symbols = [x for x in args if x != '']
     chart_data = pd.DataFrame(columns=symbols)
+    today = datetime.strftime(datetime.today(), '%Y-%m-%d')
+    one_year_ago = datetime.strftime(datetime.today()-timedelta(days=365), '%Y-%m-%d')
     for i in symbols:
         tickerData = yf.Ticker(i)
-        tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
+        tickerDf = tickerData.history(period='1d', start=one_year_ago, end=today)
         chart_data[i] = tickerDf.Close
     st.line_chart(chart_data)
 
@@ -71,20 +74,3 @@ with st.sidebar.form('ticker_form'):
 
 if submitted:
     get_ticker_data(first_ticker, second_ticker, third_ticker)
-
-
-# Get Google Stock Data
-# tickerSymbol = 'GOOGL'
-# tickerData = yf.Ticker(tickerSymbol)
-# tickerDf = tickerData.history(period='1d', start='2010-5-31', end='2020-5-31')
-# # Available DF options: Open, High, Low, Close, Volume, Dividends, Stock splits
-
-# # Create Line Chart using Google Stock Data
-# st.write("""
-# ## Closing Price
-# """)
-# st.line_chart(tickerDf.Close)
-# st.write("""
-# ## Volume
-# """)
-# st.line_chart(tickerDf.Volume)
