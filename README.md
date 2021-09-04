@@ -1,6 +1,6 @@
 # Streamlit Projects
 
-In an attempt to learn how I can utilize streamlit for my own projects in the future, I started following a (YouTube Tutorial)[https://www.youtube.com/watch?v=JwSS70SZdyM] on the subject. Here's a breakdown of the projects.
+In an attempt to learn how I can utilize streamlit for my own projects in the future, I started following a [YouTube Tutorial](https://www.youtube.com/watch?v=JwSS70SZdyM) on the subject. Here's a breakdown of the projects.
 
 ## simple_stock_price
 
