@@ -21,3 +21,6 @@ Similar to the eda_basketball app, the eda_football app scrapes data from [pro-f
 ## sp500_data
 
 This app scrapes wikipedia for the companies in the S&P 500, and allows the end user to filter that list by sector. I added on to this project by allowing the end user to select up to 3 stocks to compare, which then pulls the closing price of those stocks and displays them in a line chart.
+
+## eda_cryptocurrency
+This app scrapes data from [CoinMarketCap](http://coinmarketcap.com) and displays information about the cryptocurrencies that the user selects. The user can adjust the currency they're viewing, the cryptocurrencies displayed, the time frame of how much the cryptocurrency has changed, and the whether they'd like the values to be sorted. Improvements over the original project: (1) The bar plot height is updated based on the number of coins selected, and (2) the user can "select all" of the coins, rather than just selecting them one at a time.
