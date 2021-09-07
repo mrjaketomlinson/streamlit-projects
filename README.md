@@ -24,3 +24,6 @@ This app scrapes wikipedia for the companies in the S&P 500, and allows the end 
 
 ## eda_cryptocurrency
 This app scrapes data from [CoinMarketCap](http://coinmarketcap.com) and displays information about the cryptocurrencies that the user selects. The user can adjust the currency they're viewing, the cryptocurrencies displayed, the time frame of how much the cryptocurrency has changed, and the whether they'd like the values to be sorted. Improvements over the original project: (1) The bar plot height is updated based on the number of coins selected, and (2) the user can "select all" of the coins, rather than just selecting them one at a time.
+
+## iris_flower_prediction
+This app uses scikit-learn to predict Iris flower types based on user input. Improvements over the original project: (1) Made the display of the prediction and prediction probability cleaner, and (2) added a bar chart to visualize the prediction probability.
